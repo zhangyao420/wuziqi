@@ -1,0 +1,89 @@
+body,ul,li,h1,h2,h3,h4,h5,h6,form,input,ol{
+  margin: 0;
+  padding:0;
+}
+img{
+  border:none;
+}
+body{
+  overflow:hidden;
+  background:url(../images/14.jpg);
+  z-index: 500;
+}
+
+%center{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+}
+$width:600px;
+.container{
+  @extend %center;
+  width:100%;
+  height:100%;
+  background:  url(../images/12.jpg)no-repeat center center;
+  position-size:900px 900px;
+
+.qipan{
+  @extend %center;
+  background: rgba(129, 155, 68, 0.51);
+  opacity:0.8;
+  width:$width;
+  height:$width;
+}
+}
+.hang{
+  display:block;
+  position:absolute;
+  left:$width/30;
+  height:2px;
+  background:#fff;
+  width:$width - $width/15;
+
+}
+.shu{
+  display:block;
+  position:absolute;
+  top:$width/30;
+  width:2px;
+  background:#fff;
+  height:$width - $width/15;
+
+}
+
+
+
+
+
+.qizi{
+  position:relative;
+  z-index:100;
+  float:left;
+  width:$width/15-10px;
+  height:$width/15-10px;
+  margin:5px;
+  border-radius:50%;
+}
+.qizi.bai{
+  background: #fff;
+
+}
+.qizi.hei{
+  background:black;
+}
+@for $i from 0 through 14{
+  .qipan i:nth-of-type(#{$i+1}){
+    top:$width/30+$i*$width/15;
+  }
+}
+@for $j from 0 through 14{
+  .qipan b:nth-of-type(#{$j+1}){
+    left:$width/30+$j*$width/15;
+  }
+}
+
+
+
